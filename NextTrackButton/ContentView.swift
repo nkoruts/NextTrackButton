@@ -14,10 +14,10 @@ struct ContentView: View {
         Button {
             withAnimation(.spring(dampingFraction: 0.5)) {
                 isClicked.toggle()
-            } // completion {} from IOS17 🥲
+            } // completion block from IOS 17 🥲
             
             // 💩💩💩
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.55) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 isClicked.toggle()
             }
         } label: {
